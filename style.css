@@ -1,0 +1,349 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-color:#F3EAC6;
+}
+
+body {
+    margin:0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             DISPLAY CACHE-CACHE                            */
+/* -------------------------------------------------------------------------- */
+
+.hide {
+    display: none !important;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 REPEAT CSS                                 */
+/* -------------------------------------------------------------------------- */
+
+.space {
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+/* .try-again {
+
+} */
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    MAIN                                    */
+/* -------------------------------------------------------------------------- */
+
+.main {
+    text-align: center;
+    height: 100%;
+}
+
+.sous-main {
+    padding-top: 25px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                               CSS FORMULAIRE                               */
+/* -------------------------------------------------------------------------- */
+
+input {
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 0.405);
+    border: 1px solid #8AAB98;
+    padding: 5px;
+}
+
+.form-block {
+    display: block;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                              MAIN BLOCK-MÉTÉO                              */
+/* -------------------------------------------------------------------------- */
+
+.meteo-block {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    padding: 0px 20px 20px 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               CSS DES TEXTES                               */
+/* -------------------------------------------------------------------------- */
+
+
+.title {
+    margin-top: 0;
+}
+
+.title-city {
+    letter-spacing: 5px;
+    font-size: 40px;
+    font-family: 'Patrick Hand';
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.title-day {
+    margin-bottom: 35px;
+    margin-top: 15px;
+    letter-spacing: 3px;
+}
+
+.day-style {
+    background-color: #BCCBAC;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: 'Patrick Hand';
+    color: black;
+    padding: 5px;
+    background-color: #BCCBAC;
+    border-radius: 10px;
+    border: 1px solid #8AAB98;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   BOUTONS                                  */
+/* -------------------------------------------------------------------------- */
+
+.meteo-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.darkbutton {
+    border-color:transparent;
+    border-radius: 100px;
+    background: transparent;
+
+}
+
+.darkbutton img {
+    width: 35px;
+}
+
+.searchbutton {
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 5px;
+    background-color: #608a865d;
+    border: solid 1px #BCCBAC ;
+}
+
+.searchbutton:hover {
+    background-color: #BCCBAC;
+    border: #608A86;
+}
+
+.home img {
+    width: 35px;
+    opacity: 85%;
+}
+
+.show7days {
+    border-radius: 10px;
+    background-color: #608a865d;
+    padding: 5px;
+    border: solid 1px #BCCBAC ;
+
+}
+
+.show7days:hover {
+    background-color: #BCCBAC;
+    border: #608A86;
+}
+
+.show3days {
+    border-radius: 10px;
+    background-color: #608a865d;
+    padding: 5px;
+    border: solid 1px #BCCBAC ;
+    margin-right: 5px;
+}
+
+.show3days:hover {
+    background-color: #BCCBAC;
+    border: #608A86;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                   Changement de background selon la météo                  */
+/* -------------------------------------------------------------------------- */
+
+
+.background-rain {
+    background-image: linear-gradient(to right bottom, #2f4858, #33505f, #375865, #3c616b, #426971);
+}
+
+.background-clouds {
+    background-image: linear-gradient(to right bottom, #2f4858, #497177, #749b8f, #aec4a7, #f3eac6);
+}
+
+
+.background-extreme {
+    background-image: linear-gradient(to right bottom, #163c83, #4b4891, #71569d, #9364a9, #b374b3);
+}
+
+.background-snow {
+    background-image: linear-gradient(to right bottom, #999999, #afafaf, #c5c5c5, #dbdbdb, #f2f2f2);
+}
+
+.background-sun {
+    background-image: linear-gradient(to right bottom, #ff9f47, #fdac50, #fcb95a, #fac566, #f9d174);
+}
+
+.meteo-input {
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                              AFFICHAGE 7 DAYS                              */
+/* -------------------------------------------------------------------------- */
+
+.meteo-gallery {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              AFFICHAGE 3 DAYS                              */
+/* -------------------------------------------------------------------------- */
+
+.meteo-gallery-3days {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  DARK MODE                                 */
+/* -------------------------------------------------------------------------- */
+
+
+body.nuit .main{
+    background-image: linear-gradient(to bottom, #1b3d2f, #26483a, #315344, #3c5e50, #47695b);
+}
+
+body.nuit .copyright {
+    color: whitesmoke;
+}
+
+/* -------------------- BACKGROUND DE LA MÉTÉO = la même -------------------- */
+
+
+body.nuit .main.background-clouds{
+    background-image: linear-gradient(to right bottom, #1b3d2f, #26483a, #315344, #3c5e50, #47695b);
+} 
+
+body.nuit .main.background-rain {
+    background-image: linear-gradient(to right bottom, #1b3d2f, #26483a, #315344, #3c5e50, #47695b);
+} 
+
+body.nuit .main.background-extreme {
+    background-image: linear-gradient(to right bottom, #1b3d2f, #26483a, #315344, #3c5e50, #47695b);
+} 
+
+body.nuit .main.background-snow  {
+    background-image: linear-gradient(to right bottom, #1b3d2f, #26483a, #315344, #3c5e50, #47695b);
+} 
+
+
+body.nuit .main.background-sun {
+    background-image: linear-gradient(to right bottom, #1b3d2f, #26483a, #315344, #3c5e50, #47695b);
+} 
+
+
+/* ----------------------------- Darkmode button ---------------------------- */
+
+
+body.nuit .darkbutton {
+    border-color:transparent;
+    border-radius: 100px;
+    background: white;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:auto;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    }
+    
+footer p {
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    font-family: 'Roboto';
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERYS                                */
+/* -------------------------------------------------------------------------- */
+
+
+@media screen and (max-width: 700px) {
+
+    .meteo-gallery{
+    flex-direction: column;
+    /* background-color: #8aab983f; */
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    width: 250px;
+    }
+
+    footer {
+        position: initial;
+    }
+
+    body {
+        height: auto;
+
+    }
+
+    .meteo-gallery img {
+        width: 50px;
+    }
+    
+    .meteo-block {
+        margin-bottom: 0px;
+        padding: 10px;
+    }
+
+}

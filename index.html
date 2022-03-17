@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Météo</title>
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no">
+            <link rel="stylesheet" href="style.css">
+
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        </head>
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                  BODY                                   -->
+<!-- ----------------------------------------------------------------------- -->
+
+        
+        <body id="body">
+
+            <div class="main" id="main-color">
+
+                <div class="sous-main">
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                              FORMUMALAIRE                               -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+                    <div>
+
+                        <h1 class="title">Quel temps fait-il</h1>   
+
+                        <form class="form-block">
+
+                            <div class="meteo-input">
+                                <label class="space" for="city">à</label>
+                                <input class="space" type="text" id="city" required>
+                                <span class="space">?</span> <br/>
+                            </div>
+
+                            <div class="meteo-btn">
+                                <button class="searchbutton space" id="citybutton" onclick="findTodayWeather(event)">Aujourd'hui</button>
+                                <button class="show3days" id="show3days" onclick="find3DaysWeather(event)">3 jours</button>
+                                <button class="show7days" id="show7days" onclick="find7DaysWeather(event)">7 jours</button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+
+
+                    <div>
+                        <p class="title-city" id="thecity"></p>
+                    </div>
+
+
+                    <div>
+                        <p id="try-again"></p>
+                    </div>
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                           Météo d'aujourd'hui                           -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+                    <div class="meteo-block" id="meteo-today">
+                        <p class="title-day" id="day"></p> <!-- Affiche le jour de la semaine -->
+                        <p id="lameteo"></p> <!-- Météo du jour -->
+                        <img id="image-meteo" width=200px/> <!-- Affiche l'icône de la météo correspondante -->
+                    </div>
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                            Météo sur 3 jours                            -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+                    <div class="meteo-gallery-3days-test" id="meteo-gallery-3days">
+
+                        <div class="meteo-gallery-3days">
+                            <div class="meteo-block meteo-block0">
+                                <p class="day-style" id="meteo0D3"></p>
+                                <img id="image-meteo0D3" width="100"/>
+                            </div> 
+
+                            <!-- J-J+1 -->
+                            <div class="meteo-block meteo-block0">
+                                <p class="day-style" id="meteo1D3"></p>
+                                <img id="image-meteo1D3" width="100"/>
+                            </div>
+
+                            <!-- J-J+2 -->
+                            <div class="meteo-block meteo-block0">
+                                <p class="day-style" id="meteo2D3"></p>
+                                <img id="image-meteo2D3" width="100"/>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                            Météo sur 7 jours                            -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+                    <div class="meteo-gallery-test" id="meteo-gallery-7days">
+
+                            <div class="meteo-gallery">
+
+                                <!-- J-J -->
+                                <div class="meteo-block meteo-block0">
+                                    <p class="day-style" id="lameteo0"></p>
+                                    <img id="image-meteo0" width="100"/>
+                                </div>
+
+                                <!-- J-J+1 -->
+                                <div class="meteo-block meteo-block0">
+                                    <p class="day-style" id="lameteo1"></p>
+                                    <img id="image-meteo1" width="100"/>
+                                </div>
+                                
+                                <!-- J-J+2 -->
+                                <div class="meteo-block meteo-block0">
+                                    <p class="day-style" id="lameteo2"></p>
+                                    <img id="image-meteo2" width="100"/>
+                                </div>
+
+                                <!-- J-J+3 -->
+                                <div class="meteo-block meteo-block0">
+                                <p class="day-style" id="lameteo3"></p>
+                                <img id="image-meteo3" width="100"/>
+                                </div>
+
+                                <!-- J-J+4 -->
+                                <div class="meteo-block meteo-block0">
+                                <p class="day-style" id="lameteo4"></p>
+                                <img id="image-meteo4" width="100"/>
+                                </div>
+
+                                <!-- J-J+5 -->
+                                <div class="meteo-block meteo-block0">
+                                <p class="day-style" id="lameteo5"></p>
+                                <img id="image-meteo5" width="100"/>
+                                </div>
+
+                                <!-- J-J+6 -->
+                                <div class="meteo-block meteo-block0">
+                                <p class="day-style" id="lameteo6"></p>
+                                <img id="image-meteo6" width="100"/>
+                                </div>
+
+                            </div>
+
+                    </div>
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 FOOTER                                  -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+                        <footer>
+
+                            <a class="home" href="index.html"><img src="img/home.png"/></a>
+                            <p class="copyright">&copy; ALD</p>
+                            <button class="darkbutton" onclick="darkMode()"><img src="img/darkmode.png"/> </button>
+                        </footer>
+
+
+<!-- ----------------------------------------------------------------------- -->
+
+
+                    </div> <!-- fin de la div "sous-main"-->
+    
+            </div>  <!-- fin de la div "main"-->
+
+
+<!-- ----------------------------------------------------------------------- -->
+
+
+        <script src="script.js"></script>
+    </body>
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                END BODY                                 -->
+<!-- ----------------------------------------------------------------------- -->
+
+</html>
+
+
+
