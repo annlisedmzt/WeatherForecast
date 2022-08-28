@@ -57,11 +57,12 @@ input {
     background-color: rgba(245, 245, 245, 0.405);
     border: 1px solid #8AAB98;
     padding: 5px;
+    box-shadow: 3px 3px 6px #404f46;
 }
 
 .form-block {
     display: block;
-}
+}   
 
 
 /* -------------------------------------------------------------------------- */
@@ -131,24 +132,10 @@ h1 {
     border-color:transparent;
     border-radius: 100px;
     background: transparent;
-
 }
 
 .darkbutton img {
     width: 35px;
-}
-
-.searchbutton {
-    border-radius: 10px;
-    padding: 5px;
-    margin-right: 5px;
-    background-color: #608a865d;
-    border: solid 1px #BCCBAC ;
-}
-
-.searchbutton:hover {
-    background-color: #BCCBAC;
-    border: #608A86;
 }
 
 .home img {
@@ -156,32 +143,21 @@ h1 {
     opacity: 85%;
 }
 
-.show7days {
+.showmeteo {
     border-radius: 10px;
-    background-color: #608a865d;
     padding: 5px;
-    border: solid 1px #BCCBAC ;
-
-}
-
-.show7days:hover {
-    background-color: #BCCBAC;
-    border: #608A86;
-}
-
-.show3days {
-    border-radius: 10px;
-    background-color: #608a865d;
-    padding: 5px;
-    border: solid 1px #BCCBAC ;
     margin-right: 5px;
+    background-color: #608a865d;
+    border: solid 1px #BCCBAC ;
+    
 }
 
-.show3days:hover {
+.showmeteo:hover {
     background-color: #BCCBAC;
-    border: #608A86;
+    border: solid 1px #608A86;
+    padding: 5px;
+    border-radius: 10px;
 }
-
 
 /* -------------------------------------------------------------------------- */
 /*                   Changement de background selon la météo                  */
@@ -244,11 +220,30 @@ h1 {
 
 body.nuit .main{
     background-image: linear-gradient(to bottom, #1b3d2f, #26483a, #315344, #3c5e50, #47695b);
+    color: whitesmoke;
 }
 
 body.nuit .copyright {
     color: whitesmoke;
 }
+
+body.nuit .showmeteo {
+    color: whitesmoke;
+}
+
+body.nuit .title {
+    color: whitesmoke;
+}
+
+body.nuit input {
+    color: whitesmoke;
+}
+
+
+
+
+
+
 
 /* -------------------- BACKGROUND DE LA MÉTÉO = la même -------------------- */
 
@@ -281,7 +276,7 @@ body.nuit .main.background-sun {
 body.nuit .darkbutton {
     border-color:transparent;
     border-radius: 100px;
-    background: white;
+    align-items: center;
 }
 
 
